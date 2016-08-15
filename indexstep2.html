@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en" ng-app="phonecatApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Google Phone Gallery</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="app.css" />
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="app.js"></script>
+  </head>
+<p>Hello, {{name}}!</p>
+
+  <body ng-controller="PhoneListController">
+<p>Total number of phones: {{phones.length}}</p>
+
+    <ul>
+      <li ng-repeat="phone in phones">
+        <span>{{phone.name}}</span>
+        <p>{{phone.snippet}}</p>
+      </li>
+    </ul>
+<table>
+ <tr><th>Row number</th></tr>
+ <tr ng-repeat="i in [0, 1, 2, 3, 4, 5, 6, 7]"><td>{{i+1}}</td></tr>
+
+ </table>
+  </body>
+</html>
